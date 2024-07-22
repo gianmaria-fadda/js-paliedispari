@@ -1,17 +1,21 @@
- const userQuestion = prompt('Inserisci la parola "Palindroma" qui sotto');
+const userQuestion = prompt('Inserisci una parola "Palindroma" qui sotto');
+checkPalindrome(userQuestion);
 
- isPalindromo(Palindromo);
- 
- console.log('userQuestion', userQuestion, typeof userQuestion);
+// FUNCTION
+function checkPalindrome(word) {
 
- 
- function isPalindromo(myPalindromo) {
-  console.log('myPalindromo', myPalindromo, typeof myPalindromo);
+let reverseWord= ''
+  for (let i = word.length - 1; i >= 0; i--) {
+    console.log(word[i]);
 
-   if (userQuestion == myPalindromo) {
-     console.log(`La parola "${userQuestion}" è un palindromo.`);
-   } else {
-     console.log(`La parola "${userQuestion}" non è un palindromo.`);
-   }
-    return;
+    reverseWord = reverseWord + word[i];
   }
+
+  console.log('reverseWord', reverseWord, reverseWord.length, typeof reverseWord);
+
+  if (word == reverseWord) {
+    alert('La parola è palindroma')
+  } else {
+    alert('La parola non è palindroma')
+  }
+}
